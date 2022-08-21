@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MyBlog</title>
+    {% comment %} <link rel="stylesheet" href="{% static 'css/base.css'%}" type="text/css"> {% endcomment %}
+    <style>
+        a {
+            text-decoration: none;
+        }
+        h1 a {
+            color: aqua;
+        }
+        h1 a:hover{
+            color: green;
+        }
+        h3 a{
+            color:blue;
+        }
+        h2 a:hover{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="{% url 'blog' %}">Zafar MyBlog</a></h1><hr>
+    </header>
+    <div>
+        {% block content %}
+        {% endblock content %}
+    </div>
+</body>
+</html>
