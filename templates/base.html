@@ -24,6 +24,7 @@
     </style>
 </head>
 <body>
+    {% csrf_token %}
     <header>
         <h1><a href="{% url 'blog' %}">Zafar MyBlog</a></h1><hr>
     </header>
